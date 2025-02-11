@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Tours - Sapphire Tours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">Sapphire Tours</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html" class="active">Tours</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="tours-page" style="margin-top: 6rem;">
+        <h1>Our Tours</h1>
+        <div class="tour-grid">
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach Tour">
+                <h3>Beach Paradise</h3>
+                <p class="price">Starting from $599</p>
+                <p class="description">Enjoy pristine beaches and crystal-clear waters.</p>
+                <button onclick="openBooking('Beach Paradise', 599)">Book Now</button>
+            </div>
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" alt="Mountain Tour">
+                <h3>Mountain Adventure</h3>
+                <p class="price">Starting from $799</p>
+                <p class="description">Experience thrilling mountain adventures.</p>
+                <button onclick="openBooking('Mountain Adventure', 799)">Book Now</button>
+            </div>
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000" alt="City Tour">
+                <h3>City Explorer</h3>
+                <p class="price">Starting from $499</p>
+                <p class="description">Discover urban culture and architecture.</p>
+                <button onclick="openBooking('City Explorer', 499)">Book Now</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book Your Tour</h2>
+            <form id="booking-form">
+                <input type="hidden" id="tour-name" name="tour-name">
+                <input type="hidden" id="tour-price" name="tour-price">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Tour Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+                </div>
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sapphire Tours. All rights reserved.</p>
+    </footer>
+
+    <script src="js/telegram.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
